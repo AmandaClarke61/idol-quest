@@ -1,0 +1,107 @@
+{
+    "Dnd-Scenario": "SM练习生：星光之路 (SM Trainee: Path to Stardom)",
+    "attributes": {
+      "Vocal": "你的歌唱实力，包括音准、音域和情感表达。",
+      "Dance": "你的舞蹈技巧，包括力量、柔韧性、节奏感和舞台表现力。",
+      "Rap": "你的说唱能力，包括flow、填词和节奏掌控。",
+      "Visual": "你的外貌吸引力、镜头感和时尚品味。",
+      "Charisma": "你的舞台魅力、综艺感、口才和与人交往的能力。",
+      "Resilience": "你的抗压能力、毅力、自律性和面对挫折时的恢复力。",
+      "Creativity": "你在音乐创作（如写词、作曲、编曲）、编舞或概念策划方面的才华。"
+    },
+    "baseSkills": {
+      "VocalLesson": {
+        "attribute": "Vocal",
+        "description": "参加由SM顶级声乐老师指导的声乐课，进行发声练习和歌曲演绎训练。"
+      },
+      "DancePractice": {
+        "attribute": "Dance",
+        "description": "在公司练习室进行高强度的舞蹈训练，学习最新编舞并打磨每个动作细节。"
+      },
+      "RapFreestyleSession": {
+        "attribute": "Rap",
+        "description": "与其他练习生进行Rap Battle或Freestyle练习，提升即兴创作和表达能力。"
+      },
+      "PhotoshootTraining": {
+        "attribute": "Visual",
+        "description": "参与模拟画报拍摄或MV拍摄，学习如何在镜头前展现最佳状态和时尚感。"
+      },
+      "VarietyShowAppearance": {
+        "attribute": "Charisma",
+        "description": "作为练习生代表参加公司内部的模拟综艺节目录制，锻炼口才和综艺感。"
+      },
+      "MonthlyEvaluation": {
+        "attribute": "Resilience",
+        "description": "面对严苛的月度考核，展示本月学习成果，并接受导师和公司高层的评价。"
+      },
+      "SongwritingWorkshop": {
+        "attribute": "Creativity",
+        "description": "参加歌曲创作工作坊，学习乐理知识并尝试创作自己的音乐片段。"
+      },
+      "EnduranceTraining": {
+        "attribute": "Resilience",
+        "description": "进行体能和耐力训练，以应对长时间的练习和未来高强度的舞台表演。"
+      },
+      "LanguageClass": {
+        "attribute": "Charisma",
+        "description": "学习外语（如英语、日语），为未来可能的海外活动做准备。"
+      },
+      "ConceptMeeting": {
+        "attribute": "Creativity",
+        "description": "旁听或参与新组合/新歌的概念策划会议，提出自己的想法。"
+      }
+    },
+    "startingPoint": "你刚刚通过了SM娱乐在全球范围内举办的残酷海选，正式签约成为一名备受瞩目的练习生。今天是你第一天踏入位于首尔江南区的SM总部大楼，空气中弥漫着前辈们成功的光环和无数练习生梦想的重量。一位表情严肃、气场强大的资深导师将你们这批新人召集到了A号练习室，准备进行入社第一课...",
+    "playerCustomizations": {
+      "primaryTalent": {
+        "description": "选择你最突出的核心天赋定位：",
+        "content": {
+          "VocalPowerhouse": {
+            "description": "你拥有被天使吻过的嗓音，天生就是团队的主唱担当，高音和情感拿捏是你的强项。",
+            "attributeBonus": { "Vocal": 8, "Charisma": 4 }
+          },
+          "DanceMachine": {
+            "description": "你的身体为节奏而生，任何高难度舞蹈都能被你完美消化，是舞台上最耀眼的舞者。",
+            "attributeBonus": { "Dance": 8, "Resilience": 4 }
+          },
+          "RapGenius": {
+            "description": "你拥有独特的flow和深刻的洞察力，能用Rap表达态度，是团队中不可或缺的Swag担当。",
+            "attributeBonus": { "Rap": 8, "Creativity": 4 }
+          },
+          "VisualAce": {
+            "description": "无可挑剔的外貌和黄金比例身材让你天生就是焦点，是团队的门面和画报宠儿。",
+            "attributeBonus": { "Visual": 8, "Charisma": 4 }
+          },
+          "AllRounderPotential": {
+            "description": "你在各项能力上都展现出不俗的潜力，虽然没有单项特别顶尖，但综合实力强劲，是未来的六边形战士。",
+            "attributeBonus": { "Vocal": 4, "Dance": 4, "Resilience": 4 }
+          }
+        }
+      },
+      "personalityTrait": {
+        "description": "选择一个能代表你主要性格特点的特质：",
+        "content": {
+          "DeterminedHardworker": {
+            "description": "你坚信努力就能成功，以超乎常人的毅力和汗水投入到每一次练习中。",
+            "attributeBonus": { "Resilience": 8, "Dance": 4 }
+          },
+          "NaturallyGifted": {
+            "description": "你似乎天生就具备某种才能，学习新事物比别人更快，但也可能因此偶尔懈怠。",
+            "attributeBonus": { "Creativity": 4, "Vocal": 4, "Rap": 4 } 
+          },
+          "OutgoingNetworker": {
+            "description": "你性格开朗，善于交际，能很快和周围的人打成一片，并积极争取机会。",
+            "attributeBonus": { "Charisma": 8, "Visual": 4 }
+          },
+          "QuietObserver": {
+            "description": "你比较内向，不善言辞，但观察力敏锐，能从细节中学习并默默提升自己。",
+            "attributeBonus": { "Resilience": 4, "Creativity": 4 }
+          },
+          "AmbitiousStrategist": {
+            "description": "你目标明确，对自己的发展有清晰的规划，并会为达成目标采取策略性的行动。",
+            "attributeBonus": { "Charisma": 4, "Creativity": 4, "Resilience": 4 } 
+          }
+        }
+      }
+    }
+  }

@@ -1,26 +1,151 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary-pink: #f8d6e5;
+  --primary-purple: #e3d6f8;
+  --primary-blue: #d6e8f8;
+  --accent-gold: #ffe066;
+  --accent-silver: #e6e8ea;
+  --text-main: #6d4c7d;
+  --shadow-main: 0 4px 24px 0 rgba(200, 160, 255, 0.12);
+  --border-radius: 18px;
+  --star: url('/public/star.svg');
+  --note: url('/public/note.svg');
+  --heart: url('/public/heart.svg');
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+  :root {
+    --color-background: var(--primary-pink);
+    --color-foreground: var(--text-main);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --primary-pink: #f8d6e5;
+    --primary-purple: #e3d6f8;
+    --primary-blue: #d6e8f8;
+    --accent-gold: #ffe066;
+    --accent-silver: #e6e8ea;
+    --text-main: #6d4c7d;
+    --shadow-main: 0 4px 24px 0 rgba(200, 160, 255, 0.12);
+    --border-radius: 18px;
+    --star: url('/public/star.svg');
+    --note: url('/public/note.svg');
+    --heart: url('/public/heart.svg');
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, var(--primary-pink) 0%, var(--primary-blue) 100%);
+  color: var(--text-main);
+  font-family: 'Nunito', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  min-height: 100vh;
+}
+
+/* 卡片、按钮等通用风格 */
+.card, .option-btn, .input-box, .panel {
+  background: rgba(255,255,255,0.85);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-main);
+  border: 1.5px solid var(--primary-purple);
+  padding: 1.2em 1.6em;
+  margin-bottom: 1.2em;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover, .option-btn:hover {
+  box-shadow: 0 6px 32px 0 rgba(255, 192, 236, 0.18);
+}
+
+.option-btn {
+  background: linear-gradient(90deg, var(--primary-pink) 60%, var(--primary-blue) 100%);
+  color: var(--text-main);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  margin: 0.5em 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.option-btn::after {
+  content: '';
+  display: block;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  background-image: var(--star);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  opacity: 0.7;
+}
+
+.input-box {
+  background: rgba(255,255,255,0.95);
+  border: 1.5px solid var(--primary-blue);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 12px 0 rgba(160, 200, 255, 0.10);
+}
+
+/* 柔和阴影和细腻线条 */
+hr, .divider {
+  border: none;
+  border-top: 1.5px dashed var(--primary-purple);
+  margin: 1.5em 0;
+  opacity: 0.5;
+}
+
+/* 可爱元素点缀 */
+.icon-star {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  background-image: var(--star);
+  background-size: contain;
+  vertical-align: middle;
+}
+.icon-note {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  background-image: var(--note);
+  background-size: contain;
+  vertical-align: middle;
+}
+.icon-heart {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  background-image: var(--heart);
+  background-size: contain;
+  vertical-align: middle;
+}
+
+/* 轻盈通透、略带光泽 */
+.glossy {
+  background: linear-gradient(120deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.2) 100%);
+  box-shadow: 0 2px 16px 0 rgba(255, 192, 236, 0.10);
+}
+
+/* 少女偶像氛围 */
+.title, h1, h2, h3 {
+  color: #b07aff;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px #f8d6e5;
+}
+
+/* 细节金色/银色点缀 */
+.gold {
+  color: var(--accent-gold);
+}
+.silver {
+  color: var(--accent-silver);
 }
