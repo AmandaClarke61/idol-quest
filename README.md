@@ -115,7 +115,6 @@ sm-trainee-quest/
 
 如有问题或建议，请通过以下方式联系：
 
-- 提交 [Issue](https://github.com/YOUR_USERNAME/sm-trainee-quest/issues)
 - 邮箱: liuyiodile@foxmail.com
 
 ---
